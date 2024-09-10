@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    font-size: 16px; 
+}
+
+.container { /* Main container for layout */
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper { /* Wrapper for content area */
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.cover { /* Container for cover image */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 1.25rem;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.cover img { /* Style for the cover image */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.25rem;
+}
+
+.left-section { /* Left section of the layout */
+    width: 70%;
+    padding: 3.125rem 6.25rem; 
+    background-color: white;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header { /* Header with logo and navigation */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container { /* Container for logo */
+    display: flex;
+    align-items: center;
+}
+
+#logo { /* Logo image styling */
+    width: 12.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    border-radius: 50%;
+    padding: 1.25rem;
+    background-color: white;
+    display: flex !important;
+    opacity: 0;
+}
+
+.logo-text { /* Container for logo text */
+    display: flex;
+    flex-direction: column;
+    margin-left: 3.125rem;
+}
+
+.logo-title { /* Style for the logo title */
+    font-size: 1.375rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.logo-subtitle { /* Style for the logo subtitle */
+    font-size: 1.125rem;
+    color: #666;
+}
+
+.enroll-btn { /* Styling for enroll button */
+    padding: 0.5rem 1.25rem;
+    background-color: transparent;
+    color: #228B22;
+    border: 0.125rem solid #228B22;
+    border-radius: 1.25rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.875rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.enroll-btn:hover { /* Hover effect for enroll button */
+    background-color: #228B22;
+    color: white;
+}
+
+.Welcome-form { /* Container for welcome form */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+h1 { /* Main heading style */
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin-bottom: 0.3125rem;
+    color: #333;
+}
+
+p { /* Paragraph text styling */
+    margin-bottom: 1.875rem;
+    color: #666;
+    font-size: 1rem;
+}
+
+form { /* Form container styling */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-group { /* Container for form fields */
+    position: relative;
+    margin-bottom: 1.875rem;
+}
+
+.form-group input { /* Input field styling */
+    padding: 1rem 1rem 0.0625rem 1.25rem;
+    height: 3.75rem;
+    width: 100%;
+    border: 0.0625rem solid #ccc;
+    border-radius: 0.625rem;
+    font-size: 1.125rem;
+    background-color: #F7F7F7;
+    color: #333;
+    outline: none;
+}
+
+.form-group label { /* Label for input fields */
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 1.125rem;
+    transition: all 0.2s ease;
+    pointer-events: none;
+    padding: 0 0.3125rem;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label { /* Focus effect for input label */
+    top: 1.125rem;
+    font-size: 0.875rem;
+    color: #888;
+    background-color: #F7F7F7;
+}
+
+.form-group input:focus { /* Focus effect for input fields */
+    border-color: #228B22;
+    background-color: white;
+}
+
+.remember { /* Container for remember checkbox */
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    font-size: 0.875rem;
+    color: #333;
+}
+
+.remember input { /* Checkbox styling */
+    margin-right: 0.625rem;
+    width: 1.125rem;
+    height: 1.125rem;
+    cursor: pointer;
+}
+
+.login-btn { /* Styling for login button */
+    background-color: #228B22;
+    color: white;
+    padding: 0.875rem;
+    border: none;
+    border-radius: 1.875rem;
+    font-size: 1.125rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.login-btn:hover { /* Hover effect for login button */
+    background-color: #196619;
+}
+
+.links { /* Container for additional links */
+    margin-top: 1.25rem;
+    display: flex;
+    justify-content: center;
+}
+
+.links a { /* Styling for links */
+    color: #228B22;
+    font-size: 0.875rem;
+    text-decoration: none;
+    margin: 0 0.625rem;
+}
+
+.links a:hover { /* Hover effect for links */
+    text-decoration: underline;
+}
+
+.footer { /* Footer styling */
+    font-size: 0.75rem;
+    color: #999;
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.footer span { /* Spacing for footer elements */
+    margin: 0 0.3125rem;
+}
+
+@media (max-width: 768px) { /* Responsive design for medium screens */
+    body {
+        flex-direction: column;
+    }
+
+    .container {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .left-section, .wrapper {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .left-section {
+        padding: 2rem 1rem;
+    }
+
+    #logo {
+        width: 6.25rem;
+    }
+}
+
+@media (max-width: 480px) { /* Responsive design for small screens */
+    .left-section {
+        padding: 1.25rem 0.625rem;
+    }
+
+    .header {
+        flex-direction: column;
+    }
+
+    .logo-container {
+        margin-bottom: 1.25rem;
+    }
+
+    h1 {
+        font-size: 1.875rem;
+    }
+
+    .login-btn {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+}
